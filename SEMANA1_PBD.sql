@@ -1630,7 +1630,12 @@ VARIABLE v_pesos_extra_tramo2 NUMBER;
 VARIABLE v_pesos_extra_tramo3 NUMBER;  
 
 
-EXEC :v_run_cliente := 22558061;  
+EXEC :v_run_cliente := 22558061; --  se cambia segun el run del cliente
+-- Karen: 21242003
+-- Silvana: 22176845
+-- Denisse: 18858542
+-- Amanda: 22558061
+-- Luis: 21300628
 EXEC :v_tramo1_hasta := 1000000;
 EXEC :v_tramo2_hasta := 3000000;
 EXEC :v_pesos_normales := 1200;
@@ -1753,6 +1758,17 @@ VARIABLE v_nro_cliente NUMBER;
 VARIABLE v_nro_solicitud NUMBER; 
 VARIABLE v_cant_cuotas_postergar NUMBER;
 
+-- SEBASTIAN PATRICIO QUINTANA BERRIOS
+-- EXEC :v_nro_cliente := 5;
+-- EXEC :v_nro_solicitud := 2001;
+-- EXEC :v_cant_cuotas_postergar := 2;
+
+-- KAREN SOFIA PRADENAS MANDIOLA
+-- EXEC :v_nro_cliente := 67;
+-- EXEC :v_nro_solicitud := 3004;
+-- EXEC :v_cant_cuotas_postergar := 1;
+
+-- JULIAN PAUL ARRIAGADA LUJAN
 EXEC :v_nro_cliente := 13;
 EXEC :v_nro_solicitud := 2004;
 EXEC :v_cant_cuotas_postergar := 1;
@@ -1903,6 +1919,8 @@ SELECT *
 FROM 
     CUOTA_CREDITO_CLIENTE
 WHERE 
-    NRO_SOLIC_CREDITO = 2004 
+    NRO_SOLIC_CREDITO = 2004 -- se debe cambiar segun los datos del cliente, este es de julian paul
+    -- SEBASTIAN PATRICIO QUINTANA BERRIOS = 2001
+    -- KAREN SOFIA PRADENAS MANDIOLA = 3004
 ORDER BY 
     NRO_CUOTA;
